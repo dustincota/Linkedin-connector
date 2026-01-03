@@ -1,0 +1,22 @@
+{
+  "name": "@linkedin-crm/agents",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Shared agent base classes and utilities",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {
+    "@linkedin-crm/types": "*",
+    "@supabase/supabase-js": "^2.39.0",
+    "winston": "^3.11.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.5",
+    "typescript": "^5.3.3"
+  }
+}

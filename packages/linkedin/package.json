@@ -1,0 +1,22 @@
+{
+  "name": "@linkedin-crm/linkedin",
+  "version": "1.0.0",
+  "private": true,
+  "description": "LinkedIn automation service with Playwright",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {
+    "@linkedin-crm/types": "*",
+    "playwright": "^1.40.1",
+    "winston": "^3.11.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.5",
+    "typescript": "^5.3.3"
+  }
+}

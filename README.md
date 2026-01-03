@@ -86,15 +86,59 @@ linkedin-crm-business-os/
 └── turbo.json
 ```
 
-## Build Order
+## Build Status
 
-1. ✅ Monorepo setup
-2. 🚧 Database schema
-3. 🚧 Next.js app with navigation
-4. 🚧 Leads page
-5. ⏳ LinkedIn automation
-6. ⏳ Campaign builder
-7. ⏳ Other departments
+### Phase 1: Foundation ✅
+- ✅ Monorepo setup
+- ✅ Complete database schema
+- ✅ Shared TypeScript types
+- ✅ Next.js app with navigation
+- ✅ Leads page with CRUD
+
+### Phase 2: LinkedIn Automation ✅
+- ✅ Agent server infrastructure
+- ✅ BullMQ job queue
+- ✅ Playwright LinkedIn service
+- ✅ Human-like behavior patterns
+- ✅ Inbox Sync agent
+- ✅ Campaign Runner agent
+- ✅ Reply Classifier agent (Claude)
+- ✅ Agent monitoring API
+
+### Phase 3: Campaign Builder (Next)
+- ⏳ Campaigns page
+- ⏳ Campaign builder UI
+- ⏳ Analytics dashboard
+
+### Future Phases
+- ⏳ Prospecting agents
+- ⏳ Content creation agents
+- ⏳ Deal pipeline
+- ⏳ Admin agents
+
+## Quick Start
+
+See [DEPLOYMENT.md](./DEPLOYMENT.md) for detailed setup instructions.
+
+```bash
+# Install dependencies
+npm install
+
+# Set up environment variables (see DEPLOYMENT.md)
+
+# Run web dashboard
+npm run dev
+
+# Run agent server (separate terminal)
+cd apps/agent-server
+npm run dev
+```
+
+## Documentation
+
+- [Deployment Guide](./DEPLOYMENT.md) - Complete setup and deployment instructions
+- [Database Schema](./packages/database/schema.sql) - Full database structure
+- [Agent Architecture](./apps/agent-server/) - How agents work
 
 ## License
 

@@ -1,0 +1,20 @@
+# Dependencies
+node_modules
+
+# Environment
+.env
+.env.local
+
+# Logs
+logs
+*.log
+
+# Build
+dist
+
+# Playwright
+.auth
+playwright/.auth
+
+# OS
+.DS_Store
