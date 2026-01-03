@@ -16,6 +16,7 @@ import {
   CheckSquare,
   Bot,
   Settings,
+  Sparkles,
   type LucideIcon,
 } from 'lucide-react';
 
@@ -28,6 +29,7 @@ interface NavItem {
 
 const navigation: NavItem[] = [
   { name: 'Dashboard', href: '/', icon: Home },
+  { name: 'Command Center', href: '/command-center', icon: Sparkles, divider: true },
   { name: 'Inbox', href: '/inbox', icon: Inbox },
   { name: 'Leads', href: '/leads', icon: Users },
   { name: 'Campaigns', href: '/campaigns', icon: LayoutList },
