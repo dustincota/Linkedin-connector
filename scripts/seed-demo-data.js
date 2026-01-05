@@ -22,7 +22,7 @@ async function seedDemoData() {
   try {
     // 1. Create Companies
     console.log('Creating companies...');
-    const { data: companies } = await supabase
+    const { data: companies, error: companiesError } = await supabase
       .from('companies')
       .insert([
         {
@@ -45,6 +45,16 @@ async function seedDemoData() {
         },
       ])
       .select();
+
+    if (companiesError) {
+      console.error('Error creating companies:', companiesError);
+      throw companiesError;
+    }
+
+    if (!companies || companies.length === 0) {
+      throw new Error('No companies were created');
+    }
+
     console.log(`✓ Created ${companies.length} companies\n`);
 
     // 2. Create Contacts
@@ -306,7 +316,7 @@ async function seedDemoData() {
       {
         conversation_id: conversations[1].id,
         contact_id: hotContacts[1].id,
-        message: 'Hey Mike, saw what you're building at StartupXYZ. Impressive!',
+        message: 'Hey Mike, saw what you\'re building at StartupXYZ. Impressive!',
         direction: 'outbound',
         sent_at: new Date(Date.now() - 3 * 24 * 60 * 60 * 1000).toISOString(),
       },
